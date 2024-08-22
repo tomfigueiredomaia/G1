@@ -1,0 +1,448 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>G1</title>
+    <style>
+        body,
+        html {
+            padding: 0;
+            margin: 0;
+        }
+
+        .topo {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            padding: 0 20px;
+            margin-left: 50px;
+        }
+
+        .topoesquerda {
+            display: flex;
+            gap: 20px;
+        }
+
+        .globo-com {
+            color: #0568DD;
+            font-family: Arial, Helvetica, sans-serif;
+            font-size: 16px;
+            font-weight: bold;
+            display: inline-block;
+            position: relative;  
+            text-align: center;
+        }
+
+        .globo-com:hover::after {
+            content: '';
+            position: absolute;
+            width: 130%;
+            height: 3px;
+            background-color: blue;
+            bottom: -19px;
+            left: -15%;
+            z-index: 1; 
+        }
+
+        .g1 {
+            color: #C4160D;
+            font-family: Arial, Helvetica, sans-serif;
+            font-size: 16px;
+            font-weight: bold;
+            display: inline-block;
+            position: relative;
+            text-align: center;
+        }
+
+        .g1:hover::after {
+            content: '';
+            position: absolute;
+            width: 200%;
+            height: 3px;
+            background-color: #C4160D;
+            bottom: -19px;
+            left: -50%;
+            z-index: 1;
+        }
+
+        .ge {
+            color: #04A948;
+            font-family: Arial, Helvetica, sans-serif;
+            font-size: 16px;
+            font-weight: bold;
+            display: inline-block;
+            position: relative;
+            text-align: center;
+        }
+
+        .ge:hover::after {
+            content: '';
+            position: absolute;
+            width: 200%;
+            height: 3px;
+            background-color: #04A948;
+            bottom: -19px;
+            left: -50%;
+            z-index: 1;
+        }
+
+        .gshow {
+            color: #ff6701;
+            font-family: Arial, Helvetica, sans-serif;
+            font-size: 16px;
+            font-weight: bold;
+            display: inline-block;
+            position: relative;
+            text-align: center;
+        }
+
+        .gshow:hover::after {
+            content: '';
+            position: absolute;
+            width: 150%;
+            height: 3px;
+            background-color: #ff6701;
+            bottom: -19px;
+            left: -25%;
+            z-index: 1;
+        }
+        
+
+        .globoplay {
+            color: #FA0434;
+            font-family: Arial, Helvetica, sans-serif;
+            font-size: 16px;
+            font-weight: bold;     display: inline-block;
+            position: relative;
+            text-align: center;
+        }
+
+        .globoplay:hover::after {
+            content: '';
+            position: absolute;
+            width: 140%;
+            height: 3px;
+            background-color: #FA0434;
+            bottom: -19px;
+            left: -20%;
+            z-index: 1;
+        }
+        
+
+        .oglobo {
+            color: #1D4C9A;
+            font-family: Arial, Helvetica, sans-serif;
+            font-size: 16px;
+            font-weight: bold;
+            display: inline-block;
+            position: relative;
+            text-align: center;
+        }
+
+        .oglobo:hover::after {
+            content: '';
+            position: absolute;
+            width: 140%;
+            height: 3px;
+            background-color: #1D4C9A;
+            bottom: -19px;
+            left: -20%;
+            z-index: 1;
+        }
+        
+
+        .guiadecompras {
+            color: #C4160D;
+            font-family: Arial, Helvetica, sans-serif;
+            font-size: 16px;
+            font-weight: bold;
+            display: inline-block;
+            position: relative;
+            text-align: center;
+        }
+
+        .guiadecompras:hover::after {
+            content: '';
+            position: absolute;
+            width: 120%;
+            height: 3px;
+            background-color: #C4160D;
+            bottom: -19px;
+            left: -10%;
+            z-index: 1;
+        }
+        
+
+        .topodireita {
+            display: flex;
+            align-items: center;
+            gap: 10px;
+            margin-right: 50px;
+        }
+
+        .topodireita img {
+            border-radius: 50%;
+            width: 30px;
+            height: 30px;
+            margin-left: 30px;
+        }
+
+        .assineja {
+            font-size: 18px;
+            color: black;
+            font-family: Arial, Helvetica, sans-serif;
+            font-weight: 700;
+        }
+
+        .nome {
+            font-size: 18px;
+            color: black;
+            font-family: Arial, Helvetica, sans-serif;
+            font-weight: 700;
+        }
+
+        .header {
+            height: 60px;
+            background-color: #C4170D;
+            display: flex;
+            flex-direction: row;
+            justify-content: space-between;
+            align-items: center;
+            padding: 10px;
+        }
+
+        .menu {
+            display: flex;
+            align-items: center;
+        }
+
+        .menu img {
+            width: 30px;
+            height: 30px;
+        }
+
+        .menu p {
+            margin-left: 5px;
+            color: white;
+            font-family: Arial, Helvetica, sans-serif;
+            font-size: 13px;
+            font-weight: bold;
+        }
+
+        .g1header img {
+            width: 60px;
+            height: 60px;
+        }
+
+        .search {
+            background-color: #AA120A;
+            width: 150px;
+            height: 35px;
+            margin-right: 50px;
+            display: flex;
+            flex-direction: row;
+            justify-content: flex-start;
+            align-items: center;
+        }
+
+        .search img {
+            color: white;
+            width: 20px;
+            height: 20px;
+        }
+
+        .search P {
+            color: white;
+            font-family: Arial, Helvetica, sans-serif;
+            font-size: 13px;
+            font-weight: bold;
+            margin-left: 5px;
+        }
+
+        .banner {
+            display: flex;
+            justify-content: center;
+            align-items: center;
+        }
+
+        .banner img {
+            width: 70%;
+            height: auto;
+            margin-top: 30px;
+            align-items: center;
+        }
+
+        body,
+        html {
+            padding: 0;
+            margin: 0;
+        }
+
+        .noticias {
+            display: flex;
+            justify-content: space-between;
+            margin: 20px 60px;
+        }
+
+        .noticia1 {
+            position: relative;
+            width: 65%; /* Ocupa cerca de 2/3 da largura total */
+            margin-right: 20px;
+
+        }
+        
+        .noticia2-3 {
+            display: flex;
+            flex-direction: column;
+            justify-content: space-between;
+            width: 33%; /* Ocupa cerca de 1/3 da largura total */
+        }
+
+        .noticia1 img,
+        .noticia2 img,
+        .noticia3 img {
+            width: 100%;
+            height: auto;
+            border-radius: 8px;
+            display: block;
+            object-fit: cover; /* Garante que a imagem se ajuste bem ao espaço */
+            filter: brightness(0.75); /* Escurece a imagem para melhorar a legibilidade do texto */
+        }
+
+        .noticia1-titulo
+        .noticia-titulo {
+            position: absolute;
+            bottom: 20px;
+            left: 20px;
+            color: white;
+            z-index: 2;
+            width: 90%;
+            text-shadow: 2px 2px 8px rgba(0, 0, 0, 0.7); /* Sombra para melhorar a legibilidade */
+        }
+        
+        .noticia1-titulo h1 {
+            font-size: 34px;
+            font-weight: bold;
+            margin: 0;
+            line-height: 1.2;
+        }
+
+        .noticia1-titulo p {
+            font-size: 16px;
+            font-weight: normal;
+            margin-top: 10px;
+            line-height: 1.4;
+        }
+
+        .noticia-titulo h2 {
+            font-size: 24px;
+            font-weight: bold;
+            margin: 0;
+            line-height: 1.2;
+        }
+
+        .noticia-titulo p {
+            font-size: 16px;
+            font-weight: normal;
+            margin-top: 5px;
+            line-height: 1.4;
+        }
+
+        .noticia2,
+        .noticia3 {
+            position: relative;
+            margin-bottom: 20px; /* Espaço entre as notícias */
+            border-radius: 8px;
+        }
+
+        .noticia2:last-child
+        .noticia3:last-child {
+            margin-bottom: 0;
+        }
+
+        .noticia2 img,
+        .noticia3 img {
+            height: 240px; /* Altura fixa para garantir proporção com a imagem principal */
+        }
+
+        .noticia-titulo::after {
+            content: '';
+            position: absolute;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            background: rgba(0, 0, 0, 0.5); /* Camada preta semi-transparente para melhorar a legibilidade */
+            z-index: 1;
+            border-radius: 8px;
+        }
+
+
+
+
+    </style>
+</head>
+
+<body>
+    <div class="topo">
+        <div class="topoesquerda">
+            <p class="globo-com">globo.com</p>
+            <p class="g1">g1</p>
+            <p class="ge">ge</p>
+            <p class="gshow">gshow</p>
+            <p class="globoplay">globoplay</p>
+            <p class="oglobo">o globo</p>
+            <p class="guiadecompras">guia de compras</p>
+        </div>
+        <div class="topodireita">
+            <p class="assineja">Assine Já</p>
+            <img src="FotoTom.png" alt="FotoTom">
+            <p class="nome">Antonio Figueiredo Maia</p>
+        </div>
+    </div>
+    <div class="header">
+        <div class="menu">
+            <img src="iconemenu.png" alt="iconemenu">
+            <p>MENU</p>
+        </div>
+        <div class="g1header">
+            <img src="logog1.png" alt="logog1">
+        </div>
+        <div class="search">
+            <img src="search.png" alt="search">
+            <p>BUSCAR</p>
+        </div>
+    </div>
+    <div class="banner">
+        <img src="banner.png" alt="banner">
+    </div>
+    <div class="noticias">
+        <div class="noticia1">
+        <img src="Silvio1.webp" alt="Silvio1">
+        <div class="noticia1-titulo">
+            <h1>Silvio Santos: o homem-entretenimento</h1>
+            <p>Maior apresentador da TV brasileira ficou 60 anos no ar e, desde que parou de gargalhar e jogar dinheiro para cima, os domingos na televisão nunca mais foram os mesmos. Mais do que um comunicador, Brasil perde um ícone.</p>
+        </div>
+    </div>    
+
+    <div class="noticia2-3">
+        <div class="noticia2">
+        <img src="Silvio2.jpg" alt="Silvio2">
+        <div class="noticia-titulo">
+            <h2>'Vamos sorrir e cantar': as frases vivas na memória dos brasileiros</h2>
+            <p>Uma vida de alegria e inovação na televisão brasileira</p>
+        </div>
+    </div>
+    <div class="noticia3">
+        <img src="Silvio3.jpg" alt="Silvio3">
+        <div class="noticia-titulo">
+            <h2>Casal que se conheceu na TV há 57 anos teve Silvio como padrinho</h2>
+            <p>Globo Repórter especial</p>
+        </div>
+    </div>
+
+</body>
+
+</html>
