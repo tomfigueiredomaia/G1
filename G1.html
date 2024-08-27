@@ -283,20 +283,20 @@
         .noticias {
             display: flex;
             justify-content: space-between;
+            gap: 5px; /* Adiciona espaço entre as colunas de notícias */
             margin: 20px 60px;
         }
 
         .noticia1 {
             position: relative;
             width: 65%; /* Ocupa cerca de 2/3 da largura total */
-            margin-right: 20px;
-
         }
         
         .noticia2-3 {
             display: flex;
             flex-direction: column;
             justify-content: space-between;
+            gap: 5px; /* Espaçamento vertical entre as notícias 2 e 3 */
             width: 33%; /* Ocupa cerca de 1/3 da largura total */
         }
 
@@ -306,18 +306,17 @@
             width: 100%;
             height: auto;
             border-radius: 8px;
-            display: block;
             object-fit: cover; /* Garante que a imagem se ajuste bem ao espaço */
-            filter: brightness(0.75); /* Escurece a imagem para melhorar a legibilidade do texto */
+            filter: brightness(0.75); Escurece a imagem para melhorar a legibilidade do texto
         }
 
-        .noticia1-titulo
+        .noticia1-titulo,
         .noticia-titulo {
             position: absolute;
             bottom: 20px;
             left: 20px;
             color: white;
-            z-index: 2;
+            z-index: ;
             width: 90%;
             text-shadow: 2px 2px 8px rgba(0, 0, 0, 0.7); /* Sombra para melhorar a legibilidade */
         }
@@ -353,8 +352,8 @@
         .noticia2,
         .noticia3 {
             position: relative;
-            margin-bottom: 20px; /* Espaço entre as notícias */
             border-radius: 8px;
+            overflow: hidden;
         }
 
         .noticia2:last-child
@@ -374,13 +373,14 @@
             left: 0;
             width: 100%;
             height: 100%;
-            background: rgba(0, 0, 0, 0.5); /* Camada preta semi-transparente para melhorar a legibilidade */
+            /* background: rgba(0, 0, 0, 0.5); Camada preta semi-transparente para melhorar a legibilidade */
             z-index: 1;
             border-radius: 8px;
         }
 
-
-
+        .noticia3 p {
+            display: flex;
+        }
 
     </style>
 </head>
@@ -432,7 +432,7 @@
         <img src="Silvio2.jpg" alt="Silvio2">
         <div class="noticia-titulo">
             <h2>'Vamos sorrir e cantar': as frases vivas na memória dos brasileiros</h2>
-            <p>Uma vida de alegria e inovação na televisão brasileira</p>
+            <p>Uma vida de alegria e inovação na televisão brasileira Tom tom</p>
         </div>
     </div>
     <div class="noticia3">
